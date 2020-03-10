@@ -5,3 +5,4 @@ const gzip = zlib.createGzip();
 const readStream = fs.createReadStream("./text.txt", 'utf8');
 const writeStream = fs.createWriteStream("text2.txt.gz");
 readStream.pipe(gzip).pipe(writeStream);
+//troque gzip pro gunzip e no zlib faça zlib.createGunzip, tira o enconding utf8 coloca o nome no createReadStream do arquivo text2.txt.gz, e no fs.createWriteStream coloca um nome qualquer pro arquivo que vai ser decompactado.
