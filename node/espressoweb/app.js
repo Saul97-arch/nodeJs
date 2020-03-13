@@ -3,6 +3,9 @@
 //requirir o express no nosso projeto
 const express = require('express');
 const app = express();
+//Serving static files with express
+const path = require('path');
+app.use('/');
 //Aqui você dá uma saída no browser usando o express, lindo não?, lembrando que '/' é a rota index ou a home page
 //digite localhost:3000 no navegador, aqui é um ROUTE PARAMETER
 app.get('/', (req, res) => {
